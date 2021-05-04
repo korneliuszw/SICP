@@ -1,3 +1,3 @@
-This is my repository for SICP exercises, to go back when I need to.
-I've tried racket for this but some codes doesn't have racket declaration as I used mit-scheme.
-I'm no Lisp/Scheme programmer!
+This is my repository for SICP exercises, to revise when I need to.  
+I had tried racket for this but some files, but changed to mit-scheme later.  
+**I'm no Lisp/Scheme programmer!**
