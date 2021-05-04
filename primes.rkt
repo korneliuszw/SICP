@@ -1,0 +1,25 @@
+#lang racket
+(require "exp.rkt")
+
+(define (fermat-test x)
+  (= (fermat-test-start x 10) 1)
+)
+(define (fermat-test-start x tries)
+  (if (= tries 0) 1 (
+    if (fermat-test-actual (random 1 x) x)
+        (fermat-test-start x (- tries 1))
+        -1)
+  )
+)
+(define (fermat-test-actual a x)
+  (= (remainder (expt a x) x) (remainder a x))
+ )
+(define (miller-test a x)
+  (let ([tested (expt a (- x 1))]) 
+    (if (miller-is-nontrivial tested x) -1 (= (remainder tested x) (remainder 1 x)))
+  )
+
+)
+(define (miller-is-nontrivial b x)
+  (= (square b) (remainder 1 x))
+)
